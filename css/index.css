@@ -1,0 +1,385 @@
+:root {
+    --color-light: #ffffff;
+    --color-dark: #000000;
+    --color-pink: #dc143c;
+    --color-blue: rgba(0, 102, 218, 0.993);
+    --transition: .5s;
+    --font-body: "Poppins", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-body);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-light);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--color-blue);
+}
+
+.container {
+    width: 100%;
+    height: 100vh;   
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, .3)), url(../imgs/wallpapers/ocean.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+}
+
+.header-page {
+    width: 100%;
+    height: 100px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-page h1 {
+    color: var(--color-light);
+    font-size: 3vmin;
+}
+
+.header-page ul {
+    display: flex;
+    gap: 30px;
+}
+
+.hero {
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    color: var(--color-light); 
+    text-align: left;   
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 80%;
+}
+
+.picture_hero {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.picture_hero img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.text_content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 15px;
+}
+
+.hero h2 {
+    font-size: clamp(20px, 4vw, 40px);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    width: 100%;
+    line-height: 1.5;
+    font-size: 2vmin;
+}
+
+.btn {
+    border: 3px solid var(--color-blue);
+    padding: 8px 30px;
+    background-color: var(--color-blue);
+    border-radius: 60px;
+    transition: background-color var(--transition);
+    align-self: center;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: var(--color-blue);
+}
+
+.solution_used {
+    background-color: #1e3e5e;
+    color: #ecf0f1;
+    padding: 40px 20px;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.solution_used h2 {
+    font-size: clamp(20px, 4vw, 40px);
+    margin: 40px auto;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px; 
+}
+
+.left-content, .right-content {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.left-content img, .right-content img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.left-content p, .right-content p {
+    margin-top: 0;
+    text-align: center; 
+}
+
+.btn-carousel-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.btn-carousel {
+    border: 3px solid var(--color-blue);
+    padding: 8px 30px;
+    background-color: var(--color-blue);
+    border-radius: 60px;
+    color: var(--color-light);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color var(--transition);
+}
+
+.btn-carousel:hover {
+    background-color: transparent;
+    color: var(--color-blue);
+}
+
+.footer {
+    margin-top: 25px; 
+    text-align: center;
+}
+
+#scrollTopBtn {
+    border: 3px solid var(--color-blue);
+    padding: 10px 40px;
+    background-color: var(--color-blue);
+    border-radius: 60px;
+    color: var(--color-light);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color var(--transition);
+}
+
+#scrollTopBtn:hover {
+    background-color: transparent;
+    color: var(--color-blue);
+}
+
+#expectedGoals,
+#public,
+#benefits {
+    padding: 50px 25px;
+    text-align: center;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+#utility {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, .3)), url(../imgs/wallpapers/mar.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 25px;
+    text-align: center;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin: 0 auto;
+    background-color: #1e3e5e;
+    color: #ecf0f1;
+}
+
+#expectedGoals {
+    background-color: #e0e0e0;
+}
+
+#expectedGoals h2,
+#benefits h2,
+#utility h2 {
+    font-size: clamp(20px, 4vw, 40px);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#public h2 {
+    font-size: clamp(20px, 4vw, 40px);
+    margin-bottom: 10px;
+    text-align: center;
+    color: azure;
+}
+
+#expectedGoals h3,
+#benefits h3,
+#utility h3 {
+    font-size: clamp(12px, 2vw, 24px);
+    margin-bottom: 65px;
+    text-align: center;
+}
+
+#public h3 {
+    font-size: clamp(12px, 2vw, 24px);
+    margin-bottom: 25px;
+    text-align: center;
+    color: azure;
+}
+
+#expectedGoals .content-wrapper,
+#public .content-wrapper,
+#benefits .content-wrapper,
+#utility .content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#expectedGoals p,
+#benefits p,
+#utility p {
+    width: 45%;
+    text-align: left;
+    margin: 0;
+}
+
+#public p {
+    text-align: center;
+    margin-top: 20px;
+    color: azure;
+}
+
+#expectedGoals .right_picture,
+#public .left_picture,
+#utility .right_picture {
+    width: 50%;
+}
+
+#public .left_picture img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 5px;
+}
+#expectedGoals .right_picture img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+#utility .right_picture img {
+    width: 55%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 5px;
+
+}
+
+#benefits {
+    background-color:  #e0e0e0;
+}
+
+#benefits .left_images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+    width: 45%;
+}
+
+#benefits .left_images img {
+    width: 110%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+#public {
+    background-color: #1e3e5e; 
+    justify-content: center; 
+}
+
+#public .content-wrapper {
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+}
+
+.footer {
+    margin-top: 25px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    #utility .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #utility p,
+    #utility .right_picture {
+        width: 100%;
+    }
+
+    #utility p {
+        margin-bottom: 25px;
+    }
+}

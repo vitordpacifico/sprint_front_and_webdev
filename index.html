@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <title>Oceans 20</title>
+
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body id="top">
+
+    <div id="startPage" class="container">
+        <header class="header-page">
+            <h1>OceansTracker++</h1>            
+            <nav>
+                <ul>
+                    <li><a href="#solutionUsed">Tecnologia</a></li>
+                    <li><a href="#expectedGoals">Objetivos</a></li>
+                    <li><a href="#public">Público-Alvo</a></li>
+                    <li><a href="#benefits">Benefícios</a></li>
+                    <li><a href="#utility">Utilidade</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <div class="content">
+                <div class="picture_hero">
+                    <img src="./imgs/pictures/cup_in_sand.jpg" alt="Foto de uma tartaruga afetada pelo lixo em uma praia">
+                </div>
+                <div class="text_content">
+                    <h2>Sobre a Oceans 20</h2>
+                    <p>Uma iniciativa que visa reduzir a poluição marinha e combater diretamente contra os impactos causados no oceano feitos por nós mesmos.</p>
+                    <a href="#"  id="learnMoreBtn" class="btn">Saiba Mais!</a>
+                </div>
+            </div>
+         </section>
+         
+         <section id="solutionUsed" class="solution_used">
+            <h2>A Tecnologia que foi utilizada</h2>
+            <div class="content-wrapper">
+                <div class="left-content">
+                    <img id="firstImage" src="./imgs/pictures/arduino_image.jpg" alt="Protótipo produzido com Arduino">
+                    <div class="btn-carousel-container">
+                        <button id="leftBtn" class="btn-carousel">Voltar Imagem</button>
+                        <button id="rightBtn" class="btn-carousel">Próxima Imagem</button>
+                    </div>
+                    <p>Nossa equipe se empenhou nos estudos de Arduíno R3 para criar um dispositivo que acoplasse um sensor ultrassônico, e um de temperatura. Captando assim dejetos que caiam no mar, e medindo a temperatura marítima.</p>
+                </div>
+                <div class="right-content">
+                    <img src="./imgs/pictures/waste_sea.jpg" alt="Radar submerso na água">
+                    <div class="btn-carousel-container">
+                        <button id="leftBtn" class="btn-carousel">Voltar Imagem</button>
+                        <button id="rightBtn" class="btn-carousel">Próxima Imagem</button>
+                    </div>
+                    <p>Nosso projeto visa obter dados precisos que nosso dispositivo reconheça, e mande para nosso banco de dados, podendo assim mandar para empresas costeiras um alerta de que há submerso, algum "lixo que não era para se ter".</p>
+                </div>
+            </div>
+            <footer class="footer">
+                <button id="scrollTopBtn" class="btn-carousel" onclick="scrollToTop()">Voltar ao Topo</button>
+            </footer>
+        </section>
+
+        <section id="expectedGoals">
+            <h2>Nossos objetivos</h2>
+            <h3>O que esperamos com nosso prototipo...</h3>
+            <div class="content-wrapper">
+                <p>Reduzir a poluição marinha, e combater diretamente contra os impactos causados no oceano feitos por nós mesmos.</p>
+                <div class="right_picture">
+                    <img src="./imgs/pictures/man_saving_ocean.jpg  " alt="Lixo jogado no fundo do oceano sendo recolhido.">
+                </div>
+            </div>
+            <footer class="footer">
+                <button id="scrollTopBtn" class="btn-carousel" onclick="scrollToTop()">Voltar ao Topo</button>
+            </footer>
+        </section>
+
+        <section id="public">
+            <h2>Nosso público-alvo</h2>
+            <h3>Quem pode se beneficiar com nosso projeto</h3>
+            <div class="content-wrapper">
+                <div class="left_picture">
+                    <img src="./imgs/pictures/mens_in_water.jpg" alt="Pessoas que se beneficiam com o projeto">
+                </div>
+                <p>Nós temos o desejo de beneficiar empresas costeiras, que podem ser alertadas sobre a presença de lixo no mar, e assim poderem tomar medidas para a retirada do mesmo.</p>
+            </div>
+            <footer class="footer">
+                <button id="scrollTopBtn" class="btn-carousel" onclick="scrollToTop()">Voltar ao Topo</button>
+            </footer>
+        </section>
+
+        <section id="benefits">
+            <h2>Benefícios do nosso dispositivo</h2>
+            <h3>Como nosso projeto pode ajudar o meio ambiente</h3>
+            <div class="content-wrapper">
+                <div class="left_images">
+                    <img src="./imgs/pictures/arduino_image.jpg" alt="Imagem de arduino">
+                    <img src="./imgs/pictures/arduino_image.jpg" alt="Imagem de arduino">
+                    <img src="./imgs/pictures/arduino_image.jpg" alt="Imagem de arduino">
+                    <img src="./imgs/pictures/arduino_image.jpg" alt="Imagem de arduino">
+                </div>
+                <p>Com a utilização de nosso protótipo, podemos ajudar a reduzir a poluição que há nos oceanos, e combater diretamente contra os impactos causados no mar.</p>
+            </div>
+            <footer class="footer">
+                <button id="scrollTopBtn" class="btn-carousel" onclick="scrollToTop()">Voltar ao Topo</button>
+            </footer>
+        </section>
+        
+
+        <section id="utility">
+            <h2>Utilidade do nosso projeto</h2>
+            <h3>Como nosso projeto pode ser útil para a sociedade</h3>
+            <div class="content-wrapper">
+                <p>Nosso projeto visa obter dados precisos que nosso dispositivo reconheça, e mande para nosso banco de dados, podendo assim mandar para empresas costeiras um alerta de que há submerso, algum "lixo que não era para se ter ali".</p>
+                <div class="right_picture">
+                    <img src="./imgs/pictures/man_photo.jpg" alt="Homem fotografando lixo submerso no oceano">
+                    <img src="./imgs/pictures/man_in_trash.jpg" alt="Homem coletando lixo do mar">
+                </div>
+            </div>
+            <footer class="footer">
+                <button id="scrollTopBtn" class="btn-carousel" onclick="scrollToTop()">Voltar ao Topo</button>
+            </footer>
+        </section>        
+
+    </div>
+    <script src="./scripts/index.js"></script>
+</body>
+</html>
