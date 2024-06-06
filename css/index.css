@@ -149,7 +149,7 @@ a:hover {
     gap: 25px;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 25px; 
+    padding-top: 5px; 
 }
 
 .left-content, .right-content {
@@ -175,7 +175,7 @@ a:hover {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 4px;
 }
 
 .btn-carousel {
@@ -327,7 +327,7 @@ a:hover {
 }
 
 #utility .right_picture img {
-    width: 55%;
+    width: 40%;
     height: auto;
     object-fit: contain;
     border-radius: 5px;
