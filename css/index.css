@@ -35,11 +35,11 @@ a:hover {
 
 .container {
     width: 100%;
-    height: 100vh;   
+    min-height: 100vh;   
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, .3)), url(../imgs/wallpapers/ocean.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 50%;
+    background-position: center;
 }
 
 .header-page {
@@ -63,7 +63,7 @@ a:hover {
 
 .hero {
     width: 100%;
-    height: calc(100vh - 100px);
+    min-height: calc(100vh - 100px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,6 +74,7 @@ a:hover {
 
 .content {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 30px;
     width: 80%;
@@ -95,7 +96,7 @@ a:hover {
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: flex-start; 
     gap: 15px;
 }
 
@@ -116,7 +117,7 @@ a:hover {
     background-color: var(--color-blue);
     border-radius: 60px;
     transition: background-color var(--transition);
-    align-self: center;
+    align-self: flex-start;
     margin-top: 20px;
 }
 
@@ -130,7 +131,7 @@ a:hover {
     color: #ecf0f1;
     padding: 40px 20px;
     text-align: center;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     box-sizing: border-box;
     margin: 0;
@@ -143,9 +144,9 @@ a:hover {
 
 .content-wrapper {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    flex-wrap: wrap;
     gap: 25px;
     max-width: 1200px;
     margin: 0 auto;
@@ -153,9 +154,11 @@ a:hover {
 }
 
 .left-content, .right-content {
-    width: 45%;
+    width: 100%;
+    max-width: 45%;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .left-content img, .right-content img {
@@ -285,6 +288,7 @@ a:hover {
 #benefits .content-wrapper,
 #utility .content-wrapper {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     max-width: 1200px;
@@ -296,7 +300,8 @@ a:hover {
 #expectedGoals p,
 #benefits p,
 #utility p {
-    width: 45%;
+    width: 100%;
+    max-width: 45%;
     text-align: left;
     margin: 0;
 }
@@ -310,7 +315,8 @@ a:hover {
 #expectedGoals .right_picture,
 #public .left_picture,
 #utility .right_picture {
-    width: 50%;
+    width: 100%;
+    max-width: 50%;
 }
 
 #public .left_picture img {
@@ -319,6 +325,7 @@ a:hover {
     object-fit: contain;
     border-radius: 5px;
 }
+
 #expectedGoals .right_picture img {
     width: 100%;
     height: auto;
@@ -327,11 +334,11 @@ a:hover {
 }
 
 #utility .right_picture img {
-    width: 40%;
+    width: 100%;
+    max-width: 40%;
     height: auto;
     object-fit: contain;
     border-radius: 5px;
-
 }
 
 #benefits {
@@ -341,45 +348,94 @@ a:hover {
 #benefits .left_images {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 40px;
-    width: 45%;
+    grid-gap: 10px;
+    margin-bottom: 30px;
 }
 
 #benefits .left_images img {
-    width: 110%;
+    width: 100%;
     height: auto;
     object-fit: contain;
     border-radius: 5px;
 }
 
-#public {
-    background-color: #1e3e5e; 
-    justify-content: center; 
-}
+@media (max-width: 950px) {
+    .header-page{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
 
-#public .content-wrapper {
-    flex-direction: column;
-    align-items: center;
-    max-width: 800px;
-}
+        & h1{
+            font-size: 60px;
+            border-bottom: 5px solid var(--color-blue);
+        }
+        & ul {
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+        font-size: 15px;
+        }
+    }
 
-.footer {
-    margin-top: 25px;
-    text-align: center;
-}
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
 
-@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .text_content {
+        align-items: center;
+        text-align: center;
+    }
+
+    .solution_used .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-content, .right-content {
+        max-width: 100%;
+    }
+
+    #expectedGoals .content-wrapper,
+    #public .content-wrapper,
+    #benefits .content-wrapper,
     #utility .content-wrapper {
         flex-direction: column;
         align-items: center;
     }
 
-    #utility p,
-    #utility .right_picture {
+    #expectedGoals p,
+    #benefits p,
+    #utility p {
         width: 100%;
+        text-align: center;
     }
 
-    #utility p {
-        margin-bottom: 25px;
+    #expectedGoals .right_picture,
+    #public .left_picture,
+    #utility .right_picture {
+        max-width: 100%;
+    }
+}
+
+@media (width <= 600px){
+    .header-page{
+        & h1{
+           font-size: 10vw; 
+        }
+         
+        & ul{
+            font-size: 2.3vw;
+        }
+    }
+
+    #learnMoreBtn{
+        margin: 0px auto;
     }
 }
