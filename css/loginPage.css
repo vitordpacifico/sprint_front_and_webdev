@@ -1,0 +1,211 @@
+:root {
+    --color-light: #ffffff;
+    --color-dark: #000000;
+    --color-blue: rgba(21, 19, 95, 0.993);
+    --color-lightblue: rgba(44, 39, 184, 0.993);
+    --color-darkblue: rgba(7, 6, 27, 0.993);
+    --transition: .5s;
+    --font-body: "Poppins", sans-serif;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font-body);
+}
+     
+body{
+    background-image: linear-gradient(to top,  rgba(0, 0, 0, 0.600), rgba(0, 0, 0, 0.500)),
+    url(../imgs/wallpapers/fundo-loginpage.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+     
+header {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.267);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+     
+header h1 {
+    font-size: 30px;
+    padding: 5px;
+    color: whitesmoke;
+    margin: 0;
+}
+     
+#logo {
+    text-decoration: none;
+}
+    
+.container{
+    width: 100%;
+    height: calc(100vh - 126.5px);
+}
+     
+.login-box{
+    height: 500px;
+    width: 400px;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 20%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+     
+    box-shadow: 1px 1px 30px black;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+     
+    &   h2{
+
+        text-align: center;
+        padding-bottom: 5px;
+        border-bottom: 2px solid black;
+        font-size: 25px;
+    }
+     
+    & label{
+
+        font-weight: bolder;
+        font-size: 20px;
+    }
+     
+    & input{
+        border: 2px solid black;
+        border-radius: 12px;
+        height: 30px;
+
+        padding-left: 10px;
+    }
+     
+    & input:hover{
+        background-color: rgba(128, 128, 128, 0.342);
+    }
+}
+     
+.usuario{
+    display: flex;
+    flex-direction: column;
+
+    & p{
+        color: red;
+
+        font-weight: bold;
+        margin-left: 5px;
+    }
+}
+     
+.senha{
+    display: flex;
+    flex-direction: column;
+
+    & p{
+        color: red;
+
+        font-weight: bold;
+        margin-left: 5px;
+    }
+}
+     
+button{
+    border: 2px solid;
+    border-radius: 30px;
+    height: 30px;
+    width: 35%;
+    margin: 0px auto;
+    background-color: var(--color-blue);
+    color: #eeeeee;
+}
+     
+button:hover{
+    background-color: var(--color-darkblue);
+}
+     
+.termos{
+    display: flex;
+    flex-direction: row;
+    margin: 10px auto;
+    gap: 10px;
+    & button{
+        border: 2px solid black;
+        background-color: white;
+        width: 10px;
+        height: 16px;
+        border-radius: 0px;
+    }
+    & button:hover{
+        background-color: rgba(128, 128, 128, 0.493);
+    }
+     
+    & p{
+        text-align: justify;
+
+        font-weight: bold;
+    }
+}
+     
+footer {
+    background-color: var(--color-darkblue);
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #00000075;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    & p {
+        font-size: 18px;
+        color: #eeeeee;
+
+    }
+}
+
+
+@media (width <= 950px){
+    .container{
+        height: 93vh;
+    }
+    .login-box{
+        width: 300px;
+        height: 350px;
+        font-size: 15px;
+        gap: 5px;
+    }
+
+    button{
+        height: 40px;
+    }
+
+    header{
+        display: flex;
+        justify-content: center; 
+    }
+
+    footer{
+        background-color: transparent;
+
+        & p{
+            font-size: 10px;
+        }
+    }
+}
+
+@media (height <= 600px){
+    .login-box{
+        width: 75%;
+        height: 280px;
+
+        & label{
+            font-size: 15px;
+        }
+    }
+
+    footer{
+        padding: 5px;
+    }
+}
